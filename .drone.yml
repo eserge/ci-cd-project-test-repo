@@ -1,4 +1,4 @@
-name: drone-test
+name: ci-cd-project
 kind: pipeline
 type: docker
 
