@@ -3,8 +3,6 @@ pipeline:
   environment:
     KEY1: "VAL1"
   stages:
-    stage: Lint
-    steps:
-      script:
+    - stage: Lint
+      steps:
         - echo "Linting..."
-    ...
