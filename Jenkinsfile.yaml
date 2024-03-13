@@ -4,12 +4,16 @@ pipeline:
     KEY1: "VAL1"
   stages:
     - stage: Lint
-      steps:
-        - echo "Running isort..."
-      steps:
-        - echo "Running flake8..."
-      steps:
-        - echo "Running black..."
+      parallel:
+        - stage: "Isort"
+          steps:
+            - echo "Running isort..."
+        - stage: "Flake8"
+          steps:
+            - echo "Running flake8..."
+        - stage: "Black"
+          steps:
+            - echo "Running black..."
     - stage: Build
       steps:
         - echo "docker build"
