@@ -5,4 +5,14 @@ pipeline:
   stages:
     - stage: Lint
       steps:
-        - echo "Linting..."
+        - echo "Running isort..."
+      steps:
+        - echo "Running flake8..."
+      steps:
+        - echo "Running black..."
+    - stage: Build
+      steps:
+        - echo "docker build"
+    - stage: Test
+      steps:
+        - echo "Running pytest"
