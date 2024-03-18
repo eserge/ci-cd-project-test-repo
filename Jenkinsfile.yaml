@@ -1,7 +1,9 @@
 pipeline:
+//   agent:
+//     docker:
+//       image:
   agent:
-    docker:
-      image: 'alpine:latest'
+    dockerImage: "alpine:latest"
   environment:
     KEY1: "VAL1"
   stages:
